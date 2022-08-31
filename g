@@ -2832,15 +2832,6 @@ function library:Load(options)
         Theme = "Window Background"
     })
 
-    main.MouseEnter:Connect(function()
-        services.ContextActionService:BindActionAtPriority("disablemousescroll", function() 
-            return Enum.ContextActionResult.Sink 
-        end, false, 3000, Enum.UserInputType.MouseWheel)
-    end)
-
-    main.MouseLeave:Connect(function()
-        services.ContextActionService:UnbindAction("disablemousescroll")
-    end)
 
     local outline = utility.outline(main, "Accent")
 
